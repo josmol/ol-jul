@@ -1,17 +1,28 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <button v-on:click="julrim">JULRIM</button>
+    <modal class="modal" name="hello-world" delay="2" adaptive="true" @before-open="beforeOpen">
+      MERRY CHRISTMAS EVERYONE!
+      <button v-on:click="hide">CLOSE</button>
+    </modal>
+    <button id="santa-button" v-on:click="flyingSanta">WHERE IS SANTA?</button>
+    <audio id="santa-audio">
+      <source type="audio/wav" src="../assets/sleigh-bells.wav"></audio>
+    </audio>
+    <button id="julrim-button" v-on:click="julrim">JULRIM</button>
     <audio id="rim-audio">
       <source type="audio/wav" src="../assets/ho-ho.wav"></audio>
     </audio>
-    <button v-on:click="glogg">OL TESTAR GLÖGG</button>
+    <button id="glogg-button" v-on:click="glogg">OL TESTAR GLÖGG</button>
+    <audio id="glogg-audio">
+      <source type="audio/wav" src="../assets/glogg-sound.wav"></audio>
+    </audio>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'JULBUS',
   data () {
     return {
       msg: 'JUL ÄR KUL'
@@ -19,12 +30,23 @@ export default {
   },
   methods: {
     julrim: function () {
-      var audio = document.getElementById('rim-audio')
-      audio.play()
+      var rimAudio = document.getElementById('rim-audio')
+      rimAudio.play()
+      this.$modal.show('hello-world', { foo: 'bar' })
+
     },
     glogg: function () {
-      var audio = document.getElementById('rim-audio')
-      audio.play()
+      var glitterAudio = document.getElementById('glogg-audio')
+      glitterAudio.play()
+    },
+    show () {
+      this.$modal.show('hello-world');
+    },
+    hide () {
+      this.$modal.hide('hello-world');
+    },
+    beforeOpen (event) {
+      console.log(event.params.foo);
     }
   }
 }
@@ -66,6 +88,26 @@ button{
 button:hover{
   height: 55px;
   width: 205px;
+}
+
+#julrim-button{
+  position: absolute;
+  top: 80%;
+  left: 1%;
+}
+
+#glogg-button{
+  position: absolute;
+  top: 50%;
+  right: 5%;
+}
+#santa-button{
+  position: absolute;
+  top: 25%;
+  left: 15%;
+}
+.modal{
+  color: black;
 }
 
 </style>
