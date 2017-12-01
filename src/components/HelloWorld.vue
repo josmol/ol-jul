@@ -6,6 +6,11 @@
       <source type="audio/wav" src="../assets/ho-ho.wav"></audio>
     </audio>
     <button v-on:click="glogg">OL TESTAR GLÖGG</button>
+
+    <div id="santa-animation">
+      <img id="santa-animation-image" src="../assets/santa.gif" width="200"/>
+    </div>
+
   </div>
 </template>
 
@@ -25,6 +30,18 @@ export default {
     glogg: function () {
       var audio = document.getElementById('rim-audio')
       audio.play()
+    },
+    flyingSanta: function () {
+      var audio = document.getElementById('santa-audio')
+      audio.play()
+      var santaimage = document.getElementById('santa-animation-image')
+      var value = -200
+      for (var i = 0; i < 20000; i++) {
+        setTimeout(() => {
+          value = value + 0.1
+          santaimage.style.left = value + 'px'
+        }, 100)
+      }
     }
   }
 }
@@ -48,7 +65,7 @@ a {
 }
 
 button{
-   background-image: url("../assets/sign.png");
+  background-image: url("../assets/sign.png");
   background-position: center center;
   background-repeat:  no-repeat;
   background-color: transparent;
@@ -66,6 +83,15 @@ button{
 button:hover{
   height: 55px;
   width: 205px;
+}
+
+#santa-animation{
+  position: relative;
+}
+
+#santa-animation-image{
+  position: absolute;
+  left:-200px;
 }
 
 </style>
