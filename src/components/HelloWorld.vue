@@ -5,7 +5,6 @@
     <audio id="rim-audio">
       <source type="audio/wav" src="../assets/ho-ho.wav"></audio>
     </audio>
-    <button v-on:click="julklappar">JULKLAPPSTIPS</button>
     <button v-on:click="glogg">OL TESTAR GLÖGG</button>
   </div>
 </template>
@@ -20,9 +19,12 @@ export default {
   },
   methods: {
     julrim: function () {
-      console.log("CLICKED JULRIM BUTTON")
-      var audio = document.getElementById("rim-audio");
-      audio.play();
+      var audio = document.getElementById('rim-audio')
+      audio.play()
+    },
+    glogg: function () {
+      var audio = document.getElementById('rim-audio')
+      audio.play()
     }
   }
 }
@@ -58,10 +60,12 @@ button{
   font-size: 18px;
   color:#331a00;
   font-weight: bold;
+  margin: 20px;
 }
 
 button:hover{
-  height: 60px;
-  width: 160px;
+  height: 55px;
+  width: 205px;
 }
+
 </style>
