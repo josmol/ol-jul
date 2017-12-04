@@ -25,6 +25,7 @@
   </div>
 </template>
 
+
 <script>
 export default {
   name: 'JULBUS',
@@ -38,7 +39,6 @@ export default {
       var rimAudio = document.getElementById('rim-audio')
       rimAudio.play()
       this.$modal.show('hello-world', { foo: 'bar' })
-
     },
     glogg: function () {
       var glitterAudio = document.getElementById('glogg-audio')
@@ -56,6 +56,8 @@ export default {
         }, 100)
       }
     },
+    particles: function () {
+    },
     show () {
       this.$modal.show('hello-world');
     },
@@ -64,6 +66,9 @@ export default {
     },
     beforeOpen (event) {
       console.log(event.params.foo);
+    },
+    beforeMount () {
+      this.particles()
     }
   }
 }
