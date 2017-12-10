@@ -1,23 +1,34 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <particles/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import particles from './components/Particles';
+
 export default {
-  name: 'app'
-}
+  name: 'app',
+  components: { particles }
+};
 </script>
 
 <style>
+body {
+  background-color: #100a30;
+  background-image: url('./assets/julbakgrund_transparent.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
