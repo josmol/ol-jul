@@ -21,7 +21,6 @@
     <div id="santa-animation">
       <img id="santa-animation-image" src="../assets/santa.gif" width="200"/>
     </div>
-
   </div>
 </template>
 
@@ -29,46 +28,41 @@
 <script>
 export default {
   name: 'JULBUS',
-  data () {
+  data() {
     return {
       msg: 'JUL ÄR KUL'
-    }
+    };
   },
   methods: {
-    julrim: function () {
-      var rimAudio = document.getElementById('rim-audio')
-      rimAudio.play()
-      this.$modal.show('hello-world', { foo: 'bar' })
+    julrim: function() {
+      var rimAudio = document.getElementById('rim-audio');
+      rimAudio.play();
+      this.$modal.show('hello-world', { foo: 'bar' });
     },
-    glogg: function () {
-      var glitterAudio = document.getElementById('glogg-audio')
-      glitterAudio.play()
+    glogg: function() {
+      var glitterAudio = document.getElementById('glogg-audio');
+      glitterAudio.play();
     },
-    flyingSanta: function () {
-      var audio = document.getElementById('santa-audio')
-      audio.play()
-      var santaimage = document.getElementById('santa-animation-image')
-      var value = -200
+    flyingSanta: function() {
+      var audio = document.getElementById('santa-audio');
+      audio.play();
+      var santaimage = document.getElementById('santa-animation-image');
+      var value = -200;
       for (var i = 0; i < 20000; i++) {
         setTimeout(() => {
-          value = value + 0.1
-          santaimage.style.left = value + 'px'
-        }, 100)
+          value = value + 0.1;
+          santaimage.style.left = value + 'px';
+        }, 100);
       }
     },
-    particles: function () {
-    },
-    show () {
+    show() {
       this.$modal.show('hello-world');
     },
-    hide () {
+    hide() {
       this.$modal.hide('hello-world');
     },
-    beforeOpen (event) {
+    beforeOpen(event) {
       console.log(event.params.foo);
-    },
-    beforeMount () {
-      this.particles()
     }
   }
 };
@@ -92,54 +86,53 @@ a {
   color: #42b983;
 }
 
-button{
-  background-image: url("../assets/sign.png");
+button {
+  background-image: url('../assets/sign.png');
   background-position: center center;
-  background-repeat:  no-repeat;
+  background-repeat: no-repeat;
   background-color: transparent;
-  background-size:contain;
+  background-size: contain;
   height: 50px;
   width: 200px;
   outline: none;
   border: none;
   font-size: 18px;
-  color:#331a00;
+  color: #331a00;
   font-weight: bold;
   margin: 20px;
 }
 
-button:hover{
+button:hover {
   height: 55px;
   width: 205px;
 }
 
-#santa-animation{
+#santa-animation {
   position: relative;
 }
 
-#santa-animation-image{
+#santa-animation-image {
   position: absolute;
-  left:-200px;
+  left: -200px;
 }
 
-#julrim-button{
+#julrim-button {
   position: absolute;
   top: 80%;
   left: 1%;
 }
 
-#glogg-button{
+#glogg-button {
   position: absolute;
   top: 50%;
   right: 5%;
 }
-#santa-button{
+#santa-button {
   position: absolute;
   top: 25%;
   left: 15%;
 }
-.modal{
+.modal {
   color: black;
 }
-
 </style>
