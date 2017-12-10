@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'JULBUS',
+  name: 'Home',
   data() {
     return {
       msg: 'JUL ÄR KUL'
@@ -42,6 +42,9 @@ export default {
     glogg: function() {
       var glitterAudio = document.getElementById('glogg-audio');
       glitterAudio.play();
+      glitterAudio.onended = () => {
+        this.$router.push('Glogg');
+      };
     },
     flyingSanta: function() {
       var audio = document.getElementById('santa-audio');

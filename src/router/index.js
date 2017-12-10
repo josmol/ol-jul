@@ -1,21 +1,28 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Glogg from '@/components/Glogg'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from '@/components/Home';
+import Glogg from '@/components/Glogg';
+import Chart1 from '@/components/Charts/Chart1';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'home',
+      component: Home
     },
     {
       path: '/glogg',
-      name: 'Glogg',
-      component: Glogg
+      component: Glogg,
+      children: [
+        {
+          path: '',
+          name: 'glogg',
+          component: Chart1
+        }
+      ]
     }
   ]
-})
+});
