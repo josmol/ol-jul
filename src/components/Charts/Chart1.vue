@@ -1,16 +1,18 @@
 <template>
   <div class="chart-1">
     <p>Chart-1</p>
+    <p>{{results}}</p>
     <svg class="chart-1-svg"></svg>
   </div>
 </template>
 
 <script>
+import results from '../../assets/gloggResults';
 export default {
   name: 'Chart-1',
   data() {
     return {
-      results: 'test'
+      results: results
     };
   },
   methods: {

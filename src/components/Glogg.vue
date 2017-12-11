@@ -10,24 +10,8 @@
 </template>
 
 <script>
-const data = [
-  {
-    name: 'Glögg 1',
-    score: 5
-  },
-  {
-    name: 'Glögg 2',
-    score: 3
-  }
-];
-
 export default {
   name: 'Glogg',
-  data() {
-    return {
-      results: data
-    };
-  },
   methods: {
     back: function () {
       this.$router.push({name: 'home'});
