@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/components/Home';
+import Rim from '@/components/Rim';
 import Glogg from '@/components/Glogg';
 import Chart1 from '@/components/Charts/Chart1';
 
@@ -23,6 +24,11 @@ export default new Router({
           component: Chart1
         }
       ]
+    },
+    {
+      path: '/rim',
+      name: 'rim',
+      component: Rim
     }
   ]
 });

@@ -1,10 +1,6 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <modal class="modal" name="hello-world" delay="2" adaptive="true" @before-open="beforeOpen">
-      MERRY CHRISTMAS EVERYONE!
-      <button v-on:click="hide">CLOSE</button>
-    </modal>
     <button id="santa-button" v-on:click="flyingSanta">WHERE IS SANTA?</button>
     <audio id="santa-audio">
       <source type="audio/wav" src="../assets/sleigh-bells.wav"></audio>
@@ -17,7 +13,6 @@
     <audio id="glogg-audio">
       <source type="audio/wav" src="../assets/glogg-sound.wav"></audio>
     </audio>
-
     <div id="santa-animation">
       <img id="santa-animation-image" src="../assets/santa.gif" width="200"/>
     </div>
@@ -37,7 +32,9 @@ export default {
     julrim: function() {
       var rimAudio = document.getElementById('rim-audio');
       rimAudio.play();
-      this.$modal.show('hello-world', { foo: 'bar' });
+      rimAudio.onended = () => {
+        this.$router.push('Rim');
+      };
     },
     glogg: function() {
       var glitterAudio = document.getElementById('glogg-audio');
@@ -57,15 +54,6 @@ export default {
           santaimage.style.left = value + 'px';
         }, 100);
       }
-    },
-    show() {
-      this.$modal.show('hello-world');
-    },
-    hide() {
-      this.$modal.hide('hello-world');
-    },
-    beforeOpen(event) {
-      console.log(event.params.foo);
     }
   }
 };
@@ -134,8 +122,5 @@ button:hover {
   position: absolute;
   top: 25%;
   left: 15%;
-}
-.modal {
-  color: black;
 }
 </style>
