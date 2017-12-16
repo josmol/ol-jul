@@ -1,7 +1,7 @@
 // Raw data
 const data = [
   {
-    glogg: 1,
+    nr: 1,
     name: 'Skogsglögg',
     producer: 'Grythyttan',
     color: 'Vinröd, plommon',
@@ -16,7 +16,7 @@ const data = [
     scores: [3, 4, 3, 2, 4, 4, 2, 2, 1, 2, 3, 2, 3, 2, 3, 5, 3, 2]
   },
   {
-    glogg: 2,
+    nr: 2,
     name: 'Ekologisk vit vinglögg',
     producer: 'Saturnus',
     color: 'Flädersaft',
@@ -32,7 +32,7 @@ const data = [
     scores: [1, 5, 5, 3, 3, 3, 3, 1, 5, 4, 2, 3, 3, 1, 4, 3, 2, 3]
   },
   {
-    glogg: 3,
+    nr: 3,
     name: 'Old Delhi, smak av mango, spiskummin och chili',
     producer: 'Blossa',
     color: '',
@@ -48,7 +48,7 @@ const data = [
     scores: [2, 2, 4, 3, 3, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, undefined, 2, 3]
   },
   {
-    glogg: 4,
+    nr: 4,
     name: 'God Jul Glögg (Världens barn)',
     producer: 'Saturnus',
     color: 'Plommon-röd',
@@ -63,7 +63,7 @@ const data = [
     scores: [3, 4, 5, undefined, 1, 3, 3, 4, 5, 4, 4, 3, 4, 1, 4, 4, 2, 4, 5]
   },
   {
-    glogg: 5,
+    nr: 5,
     name: 'Glühwein',
     producer: 'Katzenhütte',
     color: 'Mörkröd',
@@ -78,7 +78,7 @@ const data = [
     scores: [2, 4, 1, 2, 3, 1, 2, 3, 3, 3, 2, 2, 2, 3, 2, 5, 2, 3, 3]
   },
   {
-    glogg: 6,
+    nr: 6,
     name: 'Äppelglögg',
     producer: 'Vinfabriken',
     color: 'Äppeljuice',
@@ -93,7 +93,7 @@ const data = [
     scores: [4, 3, 3, 3, 3, 2, 5, 5, 4, 3, 4, 4, 3, 3, 3, 5, 3, 4, 4]
   },
   {
-    glogg: 7,
+    nr: 7,
     name: 'Starkvinsglögg Vit',
     producer: 'Blossa',
     color: '',
@@ -108,7 +108,7 @@ const data = [
     scores: [4, 5, 1, 3, 4, 3, 0, 2, 2, 2, 2, 3, 1, 3, 2, 1, 3, 3, 5]
   },
   {
-    glogg: 8,
+    nr: 8,
     name: 'Ekologisk Alkoholfri Glögg',
     producer: 'Blossa',
     color: 'Husets röda',

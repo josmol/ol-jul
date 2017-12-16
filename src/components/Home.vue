@@ -3,15 +3,15 @@
     <h1>{{ msg }}</h1>
     <button id="santa-button" v-on:click="flyingSanta">WHERE IS SANTA?</button>
     <audio id="santa-audio">
-      <source type="audio/wav" src="../assets/sleigh-bells.wav"></audio>
+      <source type="audio/wav" src="../assets/sleigh-bells.wav">
     </audio>
     <button id="julrim-button" v-on:click="julrim">JULRIM</button>
     <audio id="rim-audio">
-      <source type="audio/wav" src="../assets/ho-ho.wav"></audio>
+      <source type="audio/wav" src="../assets/ho-ho.wav">
     </audio>
     <button id="glogg-button" v-on:click="glogg">OL TESTAR GLÖGG</button>
     <audio id="glogg-audio">
-      <source type="audio/wav" src="../assets/glogg-sound.wav"></audio>
+      <source type="audio/wav" src="../assets/glogg-sound.wav">
     </audio>
     <div id="santa-animation">
       <img id="santa-animation-image" src="../assets/santa.gif" width="200"/>
