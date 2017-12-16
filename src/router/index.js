@@ -3,7 +3,8 @@ import Router from 'vue-router';
 import Home from '@/components/Home';
 import Rim from '@/components/Rim';
 import Glogg from '@/components/Glogg';
-import Chart1 from '@/components/Charts/Chart1';
+import ChartAll from '@/components/Charts/All';
+import ChartSingle from '@/components/Charts/Single';
 
 Vue.use(Router);
 
@@ -21,7 +22,13 @@ export default new Router({
         {
           path: '',
           name: 'glogg',
-          component: Chart1
+          component: ChartAll
+        },
+        {
+          path: ':nr',
+          name: 'glogg-single',
+          component: ChartSingle,
+          props: true
         }
       ]
     },
