@@ -1,4 +1,5 @@
 <template>
+
   <div class="hello">
     <img id="title" src="../assets/godjol.png"/>
     <button id="julrim-button" v-on:click="julrim" v-on:mouseover="smokingHouse">JULRIM</button>
@@ -21,7 +22,10 @@
     </div>
   </div>
 
+
+
 </template>
+
 
 
 <script>
@@ -188,5 +192,8 @@ button:hover {
   }
 
 }
+
+
+
 
 </style>
