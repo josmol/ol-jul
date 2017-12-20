@@ -31,7 +31,6 @@ export default {
   width: 100vw;
   height: 100vh;
 }
-
 .glogg-content {
   background: url('../assets/dsanta2.jpg') no-repeat;
   background-size: 100%;
@@ -42,7 +41,6 @@ export default {
   width: 70vw;
   min-height: 50vh;
 }
-
 button {
   background-image: url('../assets/sign.png');
   background-position: center center;
@@ -59,7 +57,6 @@ button {
   margin-top: auto;
   margin-bottom: 30px;
 }
-
 button:hover {
   height: 55px;
   width: 205px;
