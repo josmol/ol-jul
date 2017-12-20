@@ -2,6 +2,7 @@
   <div class="glogg">
     <div class="glogg-content">
       <h1>Vilken glögg är bäst i år? OL har listan!</h1>
+      <img src="../assets/dsanta2.jpg" alt=""/>
       <p> </p>
       <router-view/>
       <button v-on:click="back">Tillbaka</button>
@@ -24,16 +25,15 @@ export default {
 <style scoped lang="scss">
 
 .glogg {
-  color: white;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
 }
 .glogg-content {
-  background: url('../assets/dsanta2.jpg') no-repeat;
-  background-size: 100%;
+  margin-top: 10px;
+  background: white;
   display: flex;
   align-items: center;
   flex-direction: column;

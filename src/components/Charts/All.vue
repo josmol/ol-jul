@@ -26,6 +26,7 @@ export default {
       results: results
     };
   },
+
   mounted() {
     // d3
     //   .select('svg.chart-all')
@@ -40,18 +41,17 @@ export default {
       for(var i=0; i<glogg.scores.length; i++){
         sum += glogg.scores[i];
       }
-      console.log(sum);
       avg[j] = Math.round((sum/glogg.scores.length)*10)/10;
       j++;
     }
     
-    Chart.defaults.global.defaultFontColor = 'white';
+    Chart.defaults.global.defaultFontColor = '#666';
     Chart.defaults.global.defaultFontSize = 20;
     Chart.defaults.global.defaultFontFamily = 'Avenir';
     Chart.defaults.global.defaultFontStyle = 'bold';
 
-
-    var ctx = document.getElementById("chart-all").getContext('2d');
+    var canvas = document.getElementById("chart-all")
+    var ctx = canvas.getContext('2d');
     var myChart = new Chart(ctx, {
       type: 'horizontalBar',
       data: {
@@ -64,6 +64,21 @@ export default {
         }]
       },
       options: {
+        animation: {
+          onProgress: function(animation) {
+            //progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
+          },
+          onComplete: function(){
+
+            // VISA VÄRDE PÅ TOPPEN AV BARSEN, FUNKAR EJ?!?!?!=?#!="#"
+            this.data.datasets.forEach(function (dataset) {
+              dataset.bars.forEach(function (bar) {
+                ctx.fillText(bar.value, bar.x, bar.y - 5);
+              });
+            })
+          },
+          duration: 3000
+        },
         maintainAspectRatio: false,
         legend: {
           display: false,
@@ -101,9 +116,9 @@ export default {
         }
       }
     });
+  },
 
-    
-  }
+
 
 };
 </script>

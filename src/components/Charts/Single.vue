@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>{{glogg.name}} </p>
+    <img :src="glogg.img"/>
     <!-- <svg class="chart-single-svg"></svg> -->
   </div>
 </template>
