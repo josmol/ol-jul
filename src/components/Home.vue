@@ -9,9 +9,6 @@
     <audio id="glogg-audio">
       <source type="audio/wav" src="../assets/glogg-sound.wav">
     </audio>
-    <div id="santa-animation">
-      <img id="santa-animation-image" src="../assets/santa.gif" width="200"/>
-    </div>
     <div id="snow-gubbe">
       <img id="snow-gubbe-animation" src="../assets/snowgubbe.gif"/>
     </div>
@@ -45,18 +42,6 @@ export default {
         this.$router.push('Glogg');
       };
     },
-    // flyingSanta: function() {
-    //   var audio = document.getElementById('santa-audio');
-    //   audio.play();
-    //   var santaimage = document.getElementById('santa-animation-image');
-    //   var value = -200;
-    //   for (var i = 0; i < 20000; i++) {
-    //     setTimeout(() => {
-    //       value = value + 0.1;
-    //       santaimage.style.left = value + 'px';
-    //     }, 100);
-    //   }
-    // },
     smokingHouse: function(){
       document.getElementById("back-house").style.visibility = "visible";
       document.getElementById("front-house").style.visibility = "hidden";
@@ -83,7 +68,6 @@ li {
 a {
   color: #42b983;
 }
-
 button {
   background-image: url('../assets/sign.png');
   background-position: center center;
@@ -99,38 +83,20 @@ button {
   font-weight: bold;
   margin: 20px;
 }
-
 button:hover {
   height: 55px;
   width: 205px;
 }
-
-#santa-animation {
-  position: relative;
-}
-
-#santa-animation-image {
-  position: absolute;
-  left: -200px;
-}
-
 #julrim-button {
   position: absolute;
   top: 80%;
   left: 1%;
 }
-
 #glogg-button {
   position: absolute;
   top: 50%;
   right: 5%;
 }
-#santa-button {
-  position: absolute;
-  top: 25%;
-  left: 15%;
-}
-
 #title{
   width:17em;
 }
@@ -143,7 +109,6 @@ button:hover {
   width: 150px;
   height: 150px;
 }
-
 .both-houses{
   width: 350px;
   height: 700px;
@@ -158,7 +123,6 @@ button:hover {
   z-index: -3;
   visibility: hidden;
 }
-
 #househover{
   width: 300px;
   height: 240px;
@@ -174,11 +138,9 @@ button:hover {
     top: 75%;
     left: 40%;
   }
-
   #househover{
-    display:none
+    display:none;
   }
-
 }
 /* MOBILE */
 @media screen and (max-width: 480px) {
@@ -198,11 +160,9 @@ button:hover {
     top: 75%;
     left: 10%;
   }
-
   #househover{
-    display:none
+    display:none;
   }
-
 }
 
 </style>
