@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    
     <particles/>
     <router-view/>
   </div>
@@ -14,6 +13,7 @@ export default {
   components: { particles }
 };
 </script>
+
 
 <style>
 body {
@@ -32,4 +32,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
+
+
 </style>

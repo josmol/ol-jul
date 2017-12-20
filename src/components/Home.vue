@@ -1,4 +1,5 @@
 <template>
+
   <div class="hello">
     <img id="title" src="../assets/godjol.png"/>
     <button id="julrim-button" v-on:click="julrim" >JULRIM</button>
@@ -19,7 +20,10 @@
     <div id="househover" v-on:mouseover="smokingHouse"></div>
   </div>
 
+
+
 </template>
+
 
 
 <script>
@@ -91,11 +95,13 @@ button:hover {
   position: absolute;
   top: 80%;
   left: 1%;
+  z-index: 1;
 }
 #glogg-button {
   position: absolute;
   top: 50%;
   right: 5%;
+  z-index: 1;
 }
 #title{
   width:17em;
@@ -104,6 +110,7 @@ button:hover {
   position: absolute;
   top: 75%;
   left: 25%;
+  z-index: -1;
 }
 #snow-gubbe-animation{
   width: 150px;
@@ -155,6 +162,7 @@ button:hover {
   #julrim-button{
     top: 50%;
     left: 18%
+    
   }
   #snow-gubbe{
     top: 75%;
@@ -164,5 +172,8 @@ button:hover {
     display:none;
   }
 }
+
+
+
 
 </style>
