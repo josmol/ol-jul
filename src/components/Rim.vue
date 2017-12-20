@@ -1,5 +1,8 @@
 <template>
   <div class="rim">
+    <audio id="rim-audio">
+      <source type="audio/wav" src="../assets/ho-ho.wav">
+    </audio>
     <div class="rim-content">
       <p id="whattogive">Vad ska du ge bort?</p>
 
@@ -25,8 +28,12 @@ export default {
   name: 'Rim',
   data() {
     return {
-      rim: ""
+      rim: "",
     };
+  },
+  mounted() {
+    var rimAudio = document.getElementById('rim-audio');
+    rimAudio.play();
   },
   methods: {
     back: function () {

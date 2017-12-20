@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <img id="title" src="../assets/godjol.png"/>
-    <button id="julrim-button" v-on:click="julrim" v-on:mouseover="smokingHouse">JULRIM</button>
+    <button id="julrim-button" v-on:click="julrim" >JULRIM</button>
     <audio id="rim-audio">
       <source type="audio/wav" src="../assets/ho-ho.wav">
     </audio>
@@ -19,6 +19,7 @@
       <img id="front-house" class="both-houses" src="../assets/House_loop.gif"/>
       <img id="back-house" class="both-houses" src="../assets/House_smoke.gif"/>
     </div>
+    <div id="househover" v-on:mouseover="smokingHouse"></div>
   </div>
 
 </template>
@@ -34,11 +35,8 @@ export default {
   },
   methods: {
     julrim: function() {
-      var rimAudio = document.getElementById('rim-audio');
-      rimAudio.play();
-      rimAudio.onended = () => {
-        this.$router.push('Rim');
-      };
+ 
+      this.$router.push('Rim');
     },
     glogg: function() {
       var glitterAudio = document.getElementById('glogg-audio');
@@ -160,11 +158,25 @@ button:hover {
   z-index: -3;
   visibility: hidden;
 }
+
+#househover{
+  width: 300px;
+  height: 240px;
+  position: absolute;
+  bottom: 140px;
+  left: 20px;
+  z-index:1000;
+}
+
 /* IPAD  */
 @media screen and (max-width: 768px) {
   #snow-gubbe{
     top: 75%;
     left: 40%;
+  }
+
+  #househover{
+    display:none
   }
 
 }
@@ -185,6 +197,10 @@ button:hover {
   #snow-gubbe{
     top: 75%;
     left: 10%;
+  }
+
+  #househover{
+    display:none
   }
 
 }
