@@ -40,11 +40,7 @@ export default {
       this.$router.push('Rim');
     },
     glogg: function() {
-      var glitterAudio = document.getElementById('glogg-audio');
-      glitterAudio.play();
-      glitterAudio.onended = () => {
-        this.$router.push('Glogg');
-      };
+      this.$router.push('Glogg');
     },
     smokingHouse: function(){
       document.getElementById("back-house").style.visibility = "visible";

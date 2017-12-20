@@ -8,7 +8,7 @@
         <router-link :to='{path: "/glogg/" + result.nr}'>{{result.name}}</router-link>
       </li>
     </ul>
-    <router-view/>
+    <router-view :key="$route.fullPath"></router-view>
   </div>
 </template>
 

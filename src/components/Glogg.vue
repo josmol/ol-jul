@@ -1,5 +1,8 @@
 <template>
   <div class="glogg">
+    <audio id="glogg-audio">
+      <source type="audio/wav" src="../assets/glogg-sound.wav">
+    </audio>
     <div class="glogg-content">
       <h1>Vilken glögg är bäst i år? OL har listan!</h1>
       <img src="../assets/dsanta2.jpg" alt=""/>
@@ -17,6 +20,11 @@ export default {
     back: function() {
       this.$router.push({ name: 'home' });
     }
+  },
+
+  mounted() {
+    var glitterAudio = document.getElementById('glogg-audio');
+    glitterAudio.play();
   }
 };
 </script>
