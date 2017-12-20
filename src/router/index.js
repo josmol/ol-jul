@@ -5,13 +5,20 @@ import Rim from '@/components/Rim';
 import Glogg from '@/components/Glogg';
 import ChartAll from '@/components/Charts/All';
 import ChartSingle from '@/components/Charts/Single';
+import Start from '@/components/Start';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
+      name: 'start',
+      component: Start
+    },
+    {
+      path: '/home',
       name: 'home',
       component: Home
     },

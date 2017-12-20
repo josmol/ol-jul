@@ -3,9 +3,6 @@
     <div class="glogg-content">
       <h1>Vilken glögg är bäst? OL har hela listan!</h1>
       <p>Ol har testat all glögg och här är resultatet.</p>
-      <ul>
-        <router-link :to="{path: '/'}" append>Glogg 1</router-link>
-      </ul>
       <router-view/>
       <button v-on:click="back">Tillbaka</button>
     </div>
