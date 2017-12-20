@@ -124,12 +124,14 @@ button:hover {
   position: absolute;
   top: 80%;
   left: 1%;
+  z-index: 1;
 }
 
 #glogg-button {
   position: absolute;
   top: 50%;
   right: 5%;
+  z-index: 1;
 }
 #santa-button {
   position: absolute;
@@ -144,6 +146,7 @@ button:hover {
   position: absolute;
   top: 75%;
   left: 25%;
+  z-index: -1;
 }
 #snow-gubbe-animation{
   width: 150px;
@@ -185,6 +188,7 @@ button:hover {
   #julrim-button{
     top: 50%;
     left: 18%
+    
   }
   #snow-gubbe{
     top: 75%;
