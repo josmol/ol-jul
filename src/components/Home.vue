@@ -2,7 +2,7 @@
 
   <div class="hello">
     <img id="title" src="../assets/godjol.png"/>
-    <button id="julrim-button" v-on:click="julrim" >JULRIM</button>
+    <button id="julrim-button" v-on:mouseover="smokingHouse" v-on:click="julrim" >JULRIM</button>
     <audio id="rim-audio">
       <source type="audio/wav" src="../assets/ho-ho.wav">
     </audio>
@@ -17,7 +17,7 @@
       <img id="front-house" class="both-houses" src="../assets/House_loop.gif"/>
       <img id="back-house" class="both-houses" src="../assets/House_smoke.gif"/>
     </div>
-    <div id="househover" v-on:mouseover="smokingHouse"></div>
+ 
   </div>
 
 
@@ -93,23 +93,26 @@ button:hover {
 }
 #julrim-button {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 1%;
-  z-index: 1;
+
 }
 #glogg-button {
   position: absolute;
   top: 50%;
   right: 5%;
-  z-index: 1;
 }
 #title{
   width:17em;
 }
+.hello{
+  height: 100vh;
+  z-index: -1;
+}
 #snow-gubbe{
   position: absolute;
-  top: 75%;
-  left: 25%;
+  top: 65%;
+  left: 30%;
   z-index: -1;
 }
 #snow-gubbe-animation{
@@ -130,14 +133,7 @@ button:hover {
   z-index: -3;
   visibility: hidden;
 }
-#househover{
-  width: 300px;
-  height: 240px;
-  position: absolute;
-  bottom: 140px;
-  left: 20px;
-  z-index:1000;
-}
+
 
 /* IPAD  */
 @media screen and (max-width: 768px) {
@@ -168,8 +164,8 @@ button:hover {
     top: 75%;
     left: 10%;
   }
-  #househover{
-    display:none;
+  #js-canvas{
+    z-index: -100;
   }
 }
 
