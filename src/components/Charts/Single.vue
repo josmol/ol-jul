@@ -1,6 +1,6 @@
 <template>
   <div class="chart-single">
-    <p>Chart-Single {{nr}} </p>
+    <p>Chart-Single {{results[nr-1].name}} </p>
     <svg class="chart-single-svg"></svg>
   </div>
 </template>
