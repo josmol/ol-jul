@@ -1,14 +1,7 @@
 <template>
   <div class="hello">
     <img id="title" src="../assets/godjol.png"/>
-    <!-- <button id="santa-button" v-on:click="flyingSanta">WHERE IS SANTA?</button> -->
-    <h1>{{ msg }}</h1>
-    <!-- <button id="santa-button" v-on:click="flyingSanta">WHERE IS SANTA?</button>
-
-    <audio id="santa-audio">
-      <source type="audio/wav" src="../assets/sleigh-bells.wav">
-    </audio> -->
-    <button id="julrim-button" v-on:click="julrim">JULRIM</button>
+    <button id="julrim-button" v-on:click="julrim" v-on:mouseover="smokingHouse">JULRIM</button>
     <audio id="rim-audio">
       <source type="audio/wav" src="../assets/ho-ho.wav">
     </audio>
@@ -19,14 +12,15 @@
     <div id="santa-animation">
       <img id="santa-animation-image" src="../assets/santa.gif" width="200"/>
     </div>
-    <div id="house">
-      <img id="front-house" src="../assets/House_loop.gif"/>
-      <!-- <img id="back-house" src="../assets/House_smoke.gif"/> -->
-    </div>
     <div id="snow-gubbe">
       <img id="snow-gubbe-animation" src="../assets/snowgubbe.gif"/>
     </div>
+    <div id="house">
+      <img id="front-house" class="both-houses" src="../assets/House_loop.gif"/>
+      <img id="back-house" class="both-houses" src="../assets/House_smoke.gif"/>
+    </div>
   </div>
+
 </template>
 
 
@@ -35,7 +29,7 @@ export default {
   name: 'Home',
   data() {
     return {
-      msg: 'GOD JOL'
+      msg: ''
     };
   },
   methods: {
@@ -53,17 +47,21 @@ export default {
         this.$router.push('Glogg');
       };
     },
-    flyingSanta: function() {
-      var audio = document.getElementById('santa-audio');
-      audio.play();
-      var santaimage = document.getElementById('santa-animation-image');
-      var value = -200;
-      for (var i = 0; i < 20000; i++) {
-        setTimeout(() => {
-          value = value + 0.1;
-          santaimage.style.left = value + 'px';
-        }, 100);
-      }
+    // flyingSanta: function() {
+    //   var audio = document.getElementById('santa-audio');
+    //   audio.play();
+    //   var santaimage = document.getElementById('santa-animation-image');
+    //   var value = -200;
+    //   for (var i = 0; i < 20000; i++) {
+    //     setTimeout(() => {
+    //       value = value + 0.1;
+    //       santaimage.style.left = value + 'px';
+    //     }, 100);
+    //   }
+    // },
+    smokingHouse: function(){
+      document.getElementById("back-house").style.visibility = "visible";
+      document.getElementById("front-house").style.visibility = "hidden";
     }
   }
 };
@@ -147,12 +145,20 @@ button:hover {
   width: 150px;
   height: 150px;
 }
-#front-house{
-  height: 250px;
-  width: 150px;
+
+.both-houses{
+  width: 350px;
+  height: 700px;
   position: absolute;
-  top: 20%;
-  
+  bottom: 0;
+  left: 0;
+}
+#front-house{
+  z-index: -2;
+}
+#back-house{
+  z-index: -3;
+  visibility: hidden;
 }
 /* IPAD  */
 @media screen and (max-width: 768px) {
