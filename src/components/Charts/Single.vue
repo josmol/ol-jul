@@ -1,7 +1,7 @@
 <template>
-  <div class="chart-single">
-    <p>Chart-Single {{results[nr-1].name}} </p>
-    <svg class="chart-single-svg"></svg>
+  <div>
+    <p>{{glogg.name}} </p>
+    <!-- <svg class="chart-single-svg"></svg> -->
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
   props: ['nr'],
   data() {
     return {
-      results: results
+      glogg: results[this.nr-1]
     };
   }
 };

@@ -1,8 +1,8 @@
 <template>
   <div class="glogg">
     <div class="glogg-content">
-      <h1>Vilken glögg är bäst? OL har hela listan!</h1>
-      <p>Ol har testat all glögg och här är resultatet.</p>
+      <h1>Vilken glögg är bäst i år? OL har listan!</h1>
+      <p> </p>
       <router-view/>
       <button v-on:click="back">Tillbaka</button>
     </div>
@@ -22,7 +22,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
 .glogg {
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,10 +33,11 @@ export default {
 }
 
 .glogg-content {
+  background: url('../assets/dsanta2.jpg') no-repeat;
+  background-size: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: white;
   border-radius: 10px;
   width: 70vw;
   min-height: 50vh;

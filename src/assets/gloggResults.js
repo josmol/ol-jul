@@ -33,7 +33,8 @@ const data = [
   },
   {
     nr: 3,
-    name: 'Old Delhi, smak av mango, spiskummin och chili',
+    name: 'Blossa 17',
+    longerName: 'Old Delhi, smak av mango, spiskummin och chili',
     producer: 'Blossa',
     color: '',
     scent: 'Mango, ananas, banan',
@@ -45,7 +46,7 @@ const data = [
       'https://www.systembolaget.se/dryck/aperitif-dessert/blossa-17-8658901',
     alc: 15,
     price: 109,
-    scores: [2, 2, 4, 3, 3, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, undefined, 2, 3]
+    scores: [2, 2, 4, 3, 3, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 3]
   },
   {
     nr: 4,
@@ -60,7 +61,7 @@ const data = [
       'https://www.systembolaget.se/dryck/alkoholfritt/god-jul-glogg-191701',
     alc: 0.3,
     price: 27,
-    scores: [3, 4, 5, undefined, 1, 3, 3, 4, 5, 4, 4, 3, 4, 1, 4, 4, 2, 4, 5]
+    scores: [3, 4, 5, 1, 3, 3, 4, 5, 4, 4, 3, 4, 1, 4, 4, 2, 4, 5]
   },
   {
     nr: 5,
@@ -119,7 +120,7 @@ const data = [
     link: 'https://www.systembolaget.se/dryck/alkoholfritt/blossa-1192501',
     alc: 0.5,
     price: 39,
-    scores: [undefined, 1, 2, undefined, 3, 3, 4, 4, 5, 3, 4, 4, 5, 2, 4, 4, 4, 5, 3]
+    scores: [1, 2, 3, 3, 4, 4, 5, 3, 4, 4, 5, 2, 4, 4, 4, 5, 3]
   }
 ];
 

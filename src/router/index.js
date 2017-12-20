@@ -12,11 +12,11 @@ Vue.use(Router);
 export default new Router({
   mode: 'history',
   routes: [
-    {
-      path: '/',
-      name: 'start',
-      component: Start
-    },
+    // {
+    //   path: '/',
+    //   name: 'start',
+    //   component: Start
+    // },
     {
       path: '/home',
       name: 'home',
@@ -29,13 +29,15 @@ export default new Router({
         {
           path: '',
           name: 'glogg',
-          component: ChartAll
-        },
-        {
-          path: ':nr',
-          name: 'glogg-single',
-          component: ChartSingle,
-          props: true
+          component: ChartAll,
+          children: [
+            {
+              path: ':nr',
+              name: 'glogg-single',
+              component: ChartSingle,
+              props: true
+            }
+          ]
         }
       ]
     },
