@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <img id="title" src="../assets/godjol.png"/>
     <button id="santa-button" v-on:click="flyingSanta">WHERE IS SANTA?</button>
     <audio id="santa-audio">
       <source type="audio/wav" src="../assets/sleigh-bells.wav">
@@ -123,4 +123,9 @@ button:hover {
   top: 25%;
   left: 15%;
 }
+
+#title{
+  width:17em;
+}
+
 </style>
