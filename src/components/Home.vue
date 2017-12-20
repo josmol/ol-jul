@@ -1,12 +1,10 @@
 <template>
   <div class="hello">
-<<<<<<< Updated upstream
     <img id="title" src="../assets/godjol.png"/>
-    <button id="santa-button" v-on:click="flyingSanta">WHERE IS SANTA?</button>
-=======
+    <!-- <button id="santa-button" v-on:click="flyingSanta">WHERE IS SANTA?</button> -->
     <h1>{{ msg }}</h1>
     <!-- <button id="santa-button" v-on:click="flyingSanta">WHERE IS SANTA?</button>
->>>>>>> Stashed changes
+
     <audio id="santa-audio">
       <source type="audio/wav" src="../assets/sleigh-bells.wav">
     </audio> -->
@@ -137,10 +135,9 @@ button:hover {
   left: 15%;
 }
 
-<<<<<<< Updated upstream
 #title{
   width:17em;
-=======
+}
 #snow-gubbe{
   position: absolute;
   top: 75%;
@@ -183,7 +180,7 @@ button:hover {
     top: 75%;
     left: 10%;
   }
->>>>>>> Stashed changes
+
 }
 
 </style>
