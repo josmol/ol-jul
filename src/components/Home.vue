@@ -1,11 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <button id="santa-button" v-on:click="flyingSanta">WHERE IS SANTA?</button>
-    <audio id="santa-audio">
-      <source type="audio/wav" src="../assets/sleigh-bells.wav">
-    </audio>
-    <button id="julrim-button" v-on:click="julrim">JULRIM</button>
+    <img id="title" src="../assets/godjol.png"/>
+    <button id="julrim-button" v-on:click="julrim" v-on:mouseover="smokingHouse">JULRIM</button>
     <audio id="rim-audio">
       <source type="audio/wav" src="../assets/ho-ho.wav">
     </audio>
@@ -16,7 +12,15 @@
     <div id="santa-animation">
       <img id="santa-animation-image" src="../assets/santa.gif" width="200"/>
     </div>
+    <div id="snow-gubbe">
+      <img id="snow-gubbe-animation" src="../assets/snowgubbe.gif"/>
+    </div>
+    <div id="house">
+      <img id="front-house" class="both-houses" src="../assets/House_loop.gif"/>
+      <img id="back-house" class="both-houses" src="../assets/House_smoke.gif"/>
+    </div>
   </div>
+
 </template>
 
 
@@ -25,7 +29,7 @@ export default {
   name: 'Home',
   data() {
     return {
-      msg: 'JUL ÄR KUL'
+      msg: ''
     };
   },
   methods: {
@@ -43,17 +47,21 @@ export default {
         this.$router.push('Glogg');
       };
     },
-    flyingSanta: function() {
-      var audio = document.getElementById('santa-audio');
-      audio.play();
-      var santaimage = document.getElementById('santa-animation-image');
-      var value = -200;
-      for (var i = 0; i < 20000; i++) {
-        setTimeout(() => {
-          value = value + 0.1;
-          santaimage.style.left = value + 'px';
-        }, 100);
-      }
+    // flyingSanta: function() {
+    //   var audio = document.getElementById('santa-audio');
+    //   audio.play();
+    //   var santaimage = document.getElementById('santa-animation-image');
+    //   var value = -200;
+    //   for (var i = 0; i < 20000; i++) {
+    //     setTimeout(() => {
+    //       value = value + 0.1;
+    //       santaimage.style.left = value + 'px';
+    //     }, 100);
+    //   }
+    // },
+    smokingHouse: function(){
+      document.getElementById("back-house").style.visibility = "visible";
+      document.getElementById("front-house").style.visibility = "hidden";
     }
   }
 };
@@ -64,6 +72,7 @@ export default {
 h1,
 h2 {
   font-weight: normal;
+  color: white;
 }
 ul {
   list-style-type: none;
@@ -123,4 +132,61 @@ button:hover {
   top: 25%;
   left: 15%;
 }
+
+#title{
+  width:17em;
+}
+#snow-gubbe{
+  position: absolute;
+  top: 75%;
+  left: 25%;
+}
+#snow-gubbe-animation{
+  width: 150px;
+  height: 150px;
+}
+
+.both-houses{
+  width: 350px;
+  height: 700px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#front-house{
+  z-index: -2;
+}
+#back-house{
+  z-index: -3;
+  visibility: hidden;
+}
+/* IPAD  */
+@media screen and (max-width: 768px) {
+  #snow-gubbe{
+    top: 75%;
+    left: 40%;
+  }
+
+}
+/* MOBILE */
+@media screen and (max-width: 480px) {
+  #santa-button{
+    top: 20%;
+    left: 18%
+  }
+  #glogg-button{
+     top: 35%;
+     left: 18%;
+  }
+  #julrim-button{
+    top: 50%;
+    left: 18%
+  }
+  #snow-gubbe{
+    top: 75%;
+    left: 10%;
+  }
+
+}
+
 </style>
