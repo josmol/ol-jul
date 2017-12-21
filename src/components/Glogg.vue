@@ -4,11 +4,11 @@
       <source type="audio/wav" src="../assets/glogg-sound.wav">
     </audio>
     <div class="glogg-content">
+      <a class="close-window" v-on:click="back">X</a>
       <h1>Vilken glögg är bäst i år? OL har listan!</h1>
       <img src="../assets/dsanta2.jpg" alt=""/>
-      <p> </p>
+      <p>Glöggprovning</p>
       <router-view/>
-      <button v-on:click="back">Tillbaka</button>
     </div>
   </div>
 </template>
@@ -48,6 +48,7 @@ export default {
   border-radius: 10px;
   width: 70vw;
   min-height: 50vh;
+    padding-bottom: 50px;
 }
 button {
   background-image: url('../assets/sign.png');
@@ -68,5 +69,13 @@ button {
 button:hover {
   height: 55px;
   width: 205px;
+}
+.close-window{
+  margin-left: 90%;
+  margin-top: 30px;
+  font-size: 30px;
+}
+.close-window:hover{
+  color: #666;
 }
 </style>

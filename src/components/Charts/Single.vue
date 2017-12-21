@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="glogg-preview">
     <p>{{glogg.name}} </p>
     <img :src="glogg.img" width="120"/>
     <!-- <svg class="chart-single-svg"></svg> -->
@@ -24,5 +24,11 @@ export default {
 .chart-single {
   height: 500px;
   margin: 30px;
+}
+#glogg-preview{
+  border: 2px solid #f2f2f2;
+  margin: 30px 300px;
+  height: 300px;
+  width: 375px;
 }
 </style>

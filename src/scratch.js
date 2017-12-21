@@ -90,7 +90,7 @@
     
     function handlePercentage(filledInPixels) {
       filledInPixels = filledInPixels || 0;
-      console.log(filledInPixels + '%');
+     // console.log(filledInPixels + '%');
       if (filledInPixels > 50) {
         canvas.parentNode.removeChild(canvas);
         fade();
@@ -138,6 +138,6 @@
       //console.log(container.style.opacity)
       
       }
-      document.getElementsByClassName("hello").style.zIndex="1";
+      // document.getElementsByClassName("hello").style.zIndex="1";
     }
     

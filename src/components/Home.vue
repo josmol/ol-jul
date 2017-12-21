@@ -1,7 +1,7 @@
 <template>
 
   <div class="hello">
-    <img id="title" src="../assets/godjol.png"/>
+    <img id="title" alt="God Jul från Osqledaren" src="../assets/godjol.png"/>
     <button id="julrim-button" v-on:mouseover="smokingHouse" v-on:click="julrim" >JULRIM</button>
     <audio id="rim-audio">
       <source type="audio/wav" src="../assets/ho-ho.wav">
@@ -87,6 +87,7 @@ button:hover {
   height: 55px;
   width: 205px;
 }
+
 #julrim-button {
   position: absolute;
   top: 70%;

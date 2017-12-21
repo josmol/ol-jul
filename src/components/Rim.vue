@@ -1,9 +1,12 @@
 <template>
   <div class="rim">
+    
     <audio id="rim-audio">
       <source type="audio/wav" src="../assets/ho-ho.wav">
     </audio>
     <div class="rim-content">
+      <a class="close-window" v-on:click="back">X</a>
+
       <p id="whattogive">Vad ska du ge bort?</p>
 
       <div class="selectgift">
@@ -152,6 +155,16 @@ p{
 #displayrim p{
   margin-right:5vw;
   margin-left:5vw;
+}
+
+.close-window{
+  margin-left: 90%;
+  margin-top: 30px;
+  font-size: 30px;
+  color: white;
+}
+.close-window:hover{
+  color: #666;
 }
 
 @media screen and (max-width: 760px) {

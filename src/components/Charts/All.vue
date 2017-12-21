@@ -3,17 +3,17 @@
     <div class="chart-container" style="position: relative; height: 100%; width:50vw">
         <canvas id="chart-all"></canvas>
     </div>
-    <ul>
-      <li v-for="result in results" :key="result.nr">
+    <router-view :key="$route.fullPath"></router-view>
+    <ul id="glogg-list">
+      <li class="glogg-list-item" v-for="result in results" :key="result.nr">
         <router-link :to='{path: "/glogg/" + result.nr}'>{{result.name}}</router-link>
       </li>
     </ul>
-    <router-view :key="$route.fullPath"></router-view>
   </div>
 </template>
 
 <script>
-import * as d3 from 'd3';
+// import * as d3 from 'd3';
 import results from '@/assets/gloggResults';
 import Chart from 'chart.js';
 
@@ -34,7 +34,7 @@ export default {
     //   .attr('height', this.height)
     //   .data(this.results);
 
-    var avg = new Array();
+    var avg = [];
     var j = 0;
     for(var glogg of this.results){
       var sum = 0;
@@ -46,7 +46,7 @@ export default {
     }
     
     Chart.defaults.global.defaultFontColor = '#666';
-    Chart.defaults.global.defaultFontSize = 20;
+    Chart.defaults.global.defaultFontSize = 18;
     Chart.defaults.global.defaultFontFamily = 'Avenir';
     Chart.defaults.global.defaultFontStyle = 'bold';
 
@@ -66,16 +66,16 @@ export default {
       options: {
         animation: {
           onProgress: function(animation) {
-            //progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
+            // progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
           },
           onComplete: function(){
 
             // VISA VÄRDE PÅ TOPPEN AV BARSEN, FUNKAR EJ?!?!?!=?#!="#"
-            this.data.datasets.forEach(function (dataset) {
-              dataset.bars.forEach(function (bar) {
-                ctx.fillText(bar.value, bar.x, bar.y - 5);
-              });
-            })
+            // this.data.datasets.forEach(function (dataset) {
+            //   dataset.bars.forEach(function (bar) {
+            //     ctx.fillText(bar.value, bar.x, bar.y - 5);
+            //   });
+            // })
           },
           duration: 3000
         },
@@ -84,7 +84,7 @@ export default {
           display: false,
           labels: {
             fontColor: 'white',
-            defaultFontSize: 20
+            defaultFontSize: 18
           }
         },
         scales: {
@@ -102,7 +102,7 @@ export default {
               fixedStepSize: 1,
               suggestedMax: 5
 
-            },
+            }
           }],
           yAxes: [{
             ticks: {
@@ -110,26 +110,55 @@ export default {
             },
             gridLines: {
               display: false
-            },
-            barThickness: 30
+            }
           }]
         }
       }
     });
+
+    console.log(myChart);
   },
-
-
-
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
+.chart-container{
+margin-left: 20%;
 
+}
   #chart-all {
     width: 100%;
-    height: 700px;
+    height: 300px;
   }
 
+  #glogg-list{
+    margin-left: 20px;
+    margin-right: 20px;
+    
+  }
+
+  .glogg-list-item{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 0;
+    border: 2px solid #f3f3f3;
+    width: 200px;
+    margin: 5px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .glogg-list-item a{
+    text-decoration: none;
+    color: black;
+  }
+
+
+  .glogg-list-item:hover, .glogg-list-item:active, .glogg-list-item:focus{
+    background-color:#f3f3f3;
+    cursor: pointer;
+  }
 </style>
