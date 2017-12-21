@@ -86,6 +86,7 @@ button {
 button:hover {
   height: 55px;
   width: 205px;
+  cursor: pointer;
 }
 
 #julrim-button {

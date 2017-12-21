@@ -12,7 +12,7 @@
         ctx          = canvas.getContext('2d'),
         image        = new Image(),
         audio        = document.getElementById('scratchSound'),
-        brush        = new Image(); 
+        brush        = new Image();
 
         
 
@@ -24,8 +24,14 @@
   image.onload = function() {
       ctx.drawImage(image, 0, 0, 1000, 800);
       
+      
       // Show the form when Image is loaded.
       document.querySelectorAll('.canvas')[0].style.visibility = 'visible';
+      ctx.font = "bold 20px Avenir";
+      
+      ctx.fillText("Brrr... Det var visst lite kallt inatt. Bäst att skrapa rutan!", canvas.width/3.8, 200);
+      ctx.font = "italic 20px Avenir";
+      ctx.fillText("(Ha på ljud för bästa upplevelsen)", canvas.width/2.7, canvas.height/2.5);
       
   };
  

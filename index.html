@@ -9,8 +9,9 @@
   <body>
     <div class="container" id="js-container">
         <div id="app"></div>
-      <audio id ="scratchSound" src="src/scraping_sound.mp3"></audio>
+      <audio id ="scratchSound" src="src/assets/scraping_sound.wav"></audio>
     <canvas class="canvas" id="js-canvas" width="1000" height="800"></canvas>
+    
    
     
     <!-- built files will be auto injected -->
@@ -49,10 +50,12 @@
       .canvas {
         position: absolute;
         top: 0;
-        
         opacity: 0.8;
         width: 100vw;
-    height: 100vh;
+        height: 100vh;
+        cursor: pointer;
+        font-size: 20px;
+        color:black;
       }
   
       
