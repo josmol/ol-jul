@@ -165,6 +165,7 @@ p{
 }
 .close-window:hover{
   color: #666;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 760px) {

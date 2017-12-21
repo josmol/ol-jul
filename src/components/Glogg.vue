@@ -77,5 +77,6 @@ button:hover {
 }
 .close-window:hover{
   color: #666;
+  cursor: pointer;
 }
 </style>
