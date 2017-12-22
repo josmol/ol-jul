@@ -5,7 +5,7 @@
       <source type="audio/wav" src="../assets/ho-ho.wav">
     </audio>
     <div class="rim-content">
-      <a class="close-window" v-on:click="back">X</a>
+      <a class="close-window" v-on:click="back">&times;</a>
 
       <p id="whattogive">Vad ska du ge bort?</p>
 
@@ -158,9 +158,9 @@ p{
 }
 
 .close-window{
-  margin-left: 90%;
-  margin-top: 30px;
-  font-size: 30px;
+  margin-left: 92%;
+  margin-top: 10px;
+  font-size: 50px;
   color: white;
 }
 .close-window:hover{

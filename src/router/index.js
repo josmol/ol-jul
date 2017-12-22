@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/components/Home';
 import Rim from '@/components/Rim';
-import Glogg from '@/components/Glogg';
+import glogg from '@/components/Glogg';
 import ChartAll from '@/components/Charts/All';
 import ChartSingle from '@/components/Charts/Single';
 
@@ -18,7 +18,7 @@ export default new Router({
     },
     {
       path: '/glogg',
-      component: Glogg,
+      component: glogg,
       children: [
         {
           path: '',

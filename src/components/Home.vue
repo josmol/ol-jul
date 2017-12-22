@@ -40,7 +40,7 @@ export default {
       this.$router.push('Rim');
     },
     glogg: function() {
-      this.$router.push('Glogg');
+      this.$router.push('glogg');
     },
     smokingHouse: function(){
       document.getElementById("back-house").style.visibility = "visible";

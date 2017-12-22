@@ -4,10 +4,9 @@
       <source type="audio/wav" src="../assets/glogg-sound.wav">
     </audio>
     <div class="glogg-content">
-      <a class="close-window" v-on:click="back">X</a>
+      <a class="close-window" v-on:click="back">&times;</a>
       <h1>Vilken glögg är bäst i år? OL har listan!</h1>
-      <img src="../assets/dsanta2.jpg" alt=""/>
-      <p>Glöggprovning</p>
+      <!-- <img src="../assets/dsanta2.jpg" alt=""/> -->
       <router-view/>
     </div>
   </div>
@@ -71,9 +70,9 @@ button:hover {
   width: 205px;
 }
 .close-window{
-  margin-left: 90%;
-  margin-top: 30px;
-  font-size: 30px;
+  margin-left: 92%;
+  margin-top: 10px;
+  font-size: 50px;
 }
 .close-window:hover{
   color: #666;

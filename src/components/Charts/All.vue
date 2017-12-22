@@ -3,6 +3,7 @@
     <div class="chart-container" style="position: relative; height: 100%; width:50vw">
         <canvas id="chart-all"></canvas>
     </div>
+
     <router-view :key="$route.fullPath"></router-view>
     <ul id="glogg-list">
       <li class="glogg-list-item" v-for="result in results" :key="result.nr">
@@ -134,8 +135,7 @@ margin-left: 20%;
   }
 
   #glogg-list{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 40px;
     
   }
 
