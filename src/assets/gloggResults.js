@@ -14,6 +14,7 @@ const data = [
     alc: 14.5,
     price: 93,
     scores: [3, 4, 3, 2, 4, 4, 2, 2, 1, 2, 3, 2, 3, 2, 3, 5, 3, 2],
+    avg: 2.8,
     img: require('../assets/skogs.jpg')
   },
   {
@@ -31,6 +32,7 @@ const data = [
     alc: 12.5,
     price: 85,
     scores: [1, 5, 5, 3, 3, 3, 3, 1, 5, 4, 2, 3, 3, 1, 4, 3, 2, 3],
+    avg: 3.0,
     img: require('../assets/saturnus.jpg')
   },
   {
@@ -38,7 +40,7 @@ const data = [
     name: 'Blossa 17',
     longerName: 'Old Delhi, smak av mango, spiskummin och chili',
     producer: 'Blossa',
-    color: '',
+    color: 'Pajala Sunrise',
     scent: 'Mango, ananas, banan',
     expectedFlavor: 'Mango, len, apelsin',
     actualFlavor:
@@ -49,6 +51,7 @@ const data = [
     alc: 15,
     price: 109,
     scores: [2, 2, 4, 3, 3, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 3],
+    avg: 2.0,
     img: require('../assets/blossa17.png')
   },
   {
@@ -65,6 +68,7 @@ const data = [
     alc: 0.3,
     price: 27,
     scores: [3, 4, 5, 1, 3, 3, 4, 5, 4, 4, 3, 4, 1, 4, 4, 2, 4, 5],
+    avg: 3.5,
     img: require('../assets/godjulglogg.jpg')
   },
   {
@@ -81,6 +85,7 @@ const data = [
     alc: 10,
     price: 59,
     scores: [2, 4, 1, 2, 3, 1, 2, 3, 3, 3, 2, 2, 2, 3, 2, 5, 2, 3, 3],
+    avg: 2.5,
     img: require('../assets/katzen.jpg')
   },
   {
@@ -97,13 +102,14 @@ const data = [
     alc: 11,
     price: 85,
     scores: [4, 3, 3, 3, 3, 2, 5, 5, 4, 3, 4, 4, 3, 3, 3, 5, 3, 4, 4],
+    avg: 3.6,
     img: require('../assets/apple.jpg')
   },
   {
     nr: 7,
     name: 'Starkvinsglögg Vit',
     producer: 'Blossa',
-    color: '',
+    color: 'Pepparkakshustak',
     scent: 'Äpple, nöt',
     expectedFlavor: 'Äpple, starkt, whiskey-toner',
     actualFlavor: 'Vanilj, äpple, nöt, syrlig, päron',
@@ -113,6 +119,7 @@ const data = [
     alc: 15,
     price: 89,
     scores: [4, 5, 1, 3, 4, 3, 0, 2, 2, 2, 2, 3, 1, 3, 2, 1, 3, 3, 5],
+    avg: 2.5,
     img: require('../assets/blossastark.jpg')
   },
   {
@@ -128,6 +135,7 @@ const data = [
     alc: 0.5,
     price: 39,
     scores: [1, 2, 3, 3, 4, 4, 5, 3, 4, 4, 5, 2, 4, 4, 4, 5, 3],
+    avg: 3.5,
     img: require('../assets/alkfri.jpg')
   }
 ];

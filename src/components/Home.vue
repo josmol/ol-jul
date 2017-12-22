@@ -40,7 +40,7 @@ export default {
       this.$router.push('Rim');
     },
     glogg: function() {
-      this.$router.push('glogg');
+      this.$router.push('glogg/1');
     },
     smokingHouse: function(){
       document.getElementById("back-house").style.visibility = "visible";
@@ -101,6 +101,7 @@ button:hover {
   right: 5%;
 }
 #title{
+  padding-top: 80px;
   width:17em;
 }
 .hello{
